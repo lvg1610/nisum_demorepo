@@ -1,0 +1,4 @@
+<beans>
+   <bean id="emp1"   class="com.lvg.beans.Employee">
+   </bean>
+</beans>
