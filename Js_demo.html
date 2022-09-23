@@ -1,0 +1,46 @@
+<html>                                           
+   <script   type="text/javascript">
+       function changeColor(rbVal)
+       {
+           document.getElementById("heading1").style.color=rbVal;
+       } 
+       function addOne(list1)
+       {
+             var opt = document.createElement("option");
+             opt.text=list1.item(list1.selectedIndex).value;
+             document.getElementById("list2").add(opt);
+             list1.remove(list1.selectedIndex);
+       }  
+   </script>
+   <body>
+      <form>
+           <h1 id="heading1">Some Text Here</h1><br>
+           <input type=radio name="colours" value=green onclick="changeColor(this.value)">Green
+           <input type=radio name="colours" value=blue  onclick="changeColor(this.value)">Blue
+           <input type=radio name="colours" value=red   onclick="changeColor(this.value)">Red
+           <hr>
+           <table>
+             <tr>
+               <td>  
+                    <select multiple size=6 id="list1">
+                       <option  value="Apple">Apple</option>
+                       <option  value="Banana">Banana</option>
+                       <option  value="Custardapple">Custardapple</option>
+                       <option  value="Dragoin Fruit">Dragoin Fruit</option>
+                       <option  value="Egg Fruit">Egg Fruit</option>
+                       <option  value="Guava">Guava</option>
+                    </select> 
+               </td>
+               <td>
+                     <input type=button  value=">"   onclick="addOne(list1)">
+                     <input type=button  value=">>"  onclick="addAll()">
+               </td>  
+               <td>  
+                    <select id="list2" multiple size=6>
+                    </select>
+               </td>
+             <tr>
+           </table> 
+      </form>
+   </body>
+</html>
